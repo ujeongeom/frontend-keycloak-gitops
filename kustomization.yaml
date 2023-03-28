@@ -6,4 +6,4 @@ resources:
 - route.yaml
 images:
 - name: ghcr.io/shclub/edu12-frontend
-  newTag: "20230328002306"
+  newTag: "20230328004222"
