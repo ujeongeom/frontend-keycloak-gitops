@@ -17,10 +17,10 @@ spec:
       containers:
       - name: frontend
         image: ghcr.io/shclub/edu12-frontend
-        #image: ghcr.io/shclub/edu12-3:v10
+        imagePullPolicy: Always
         #image: shclub/edu12-3:v11
         env:
-        - name: BACKEND_API_URL
-          value: "http://backend" 
+          - name: BACKEND_API_URL
+            value: "http://backend" 
         ports:
         - containerPort: 80
