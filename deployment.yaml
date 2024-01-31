@@ -16,9 +16,8 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: ghcr.io/shclub/edu12-frontend
+        image: ghcr.io/shclub/vue_crud_security:v1
         imagePullPolicy: Always
-        #image: shclub/edu12-3:v11
         env:
           - name: BACKEND_API_URL
             value: "http://backend" 
