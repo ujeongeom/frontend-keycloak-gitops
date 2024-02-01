@@ -26,37 +26,37 @@ spec:
   strategy:
     blueGreen: 
       #activeService는 이전의 배포된 Blue 서비스
-      activeService: rollout-bluegreen-active
+      activeService: frontend-service
       
       #previewService는 새롭게 배포될 Green 서비스
-      previewService: rollout-bluegreen-preview
+      previewService: frontend-service-preview
       
       #autoPromotioEnabled 옵션은 Blue/Green 배포를 자동으로 진행할 것인지 여부. false 옵션을 사용해 수동으로 지정
       autoPromotionEnabled: false
 
 ---
-kind: Service
 apiVersion: v1
+kind: Service
 metadata:
-  name: frontend-active
+  name: frontend-service
 spec:
   selector:
     app: edu-bluegreen
   ports:
-  - protocol: TCP
-    port: 80
-    targetPort: 8080
-  type: NodePort
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+  type: NodePort   
 ---
-kind: Service
 apiVersion: v1
+kind: Service
 metadata:
-  name: rollout-bluegreen-preview
+  name: frontend-service-preview
 spec:
   selector:
-    app: rollout-bluegreen
+    app: edu-bluegreen
   ports:
-  - protocol: TCP
-    port: 80
-    targetPort: 8080
-  type: NodePort
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+  type: NodePort  
