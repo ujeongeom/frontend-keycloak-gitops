@@ -1,12 +1,12 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: traefik-routers
+  name: traefik-keycloak
   annotations:
     kubernetes.io/ingress.class: traefik
 spec:
   rules:
-    - host: frontend.211.252.87.34.nip.io
+    - host: frontend-keycloak.211.252.87.34.nip.io
       http:
         paths:
           - path: /
