@@ -8,7 +8,7 @@ metadata:
     ingressclass.kubernetes.io/is-default-class: “true”
 spec:
   rules:
-    - host: frontend-keycloak.211.252.87.34.nip.io:31860
+    - host: http://ujeongeom.duckdns.org:31262
       http:
         paths:
           - path: /
