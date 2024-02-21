@@ -8,7 +8,7 @@ metadata:
     ingressclass.kubernetes.io/is-default-class: “true”
 spec:
   rules:
-    - host: ujeongeom.duckdns.org:31789
+    - host: ujeongeom.duckdns.org
       http:
         paths:
           - path: /
