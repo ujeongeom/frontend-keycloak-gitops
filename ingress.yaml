@@ -3,7 +3,7 @@ kind: Ingress
 metadata:
   name: frontend-keycloak-ingress
   annotations:
-    kubernetes.io/ingress.class: “nginx”
+    ingressClassName: nginx
 spec:
   rules:
     - host: ujeongeom.duckdns.org
